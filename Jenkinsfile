@@ -47,10 +47,10 @@ try{
         
         stage("Push Docker Image to Docker Registry"){
             echo "Pushing image to docker hub"
-            // withCredentials([string(credentialsId: 'dockerPwd123', variable: 'dockerHubPwd')]) {
-            sh "${dockerCMD} login -u puneet20 -p Aster1x2021#"
-            sh "${dockerCMD} push puneet20/javabootcamp:${tagName}"
-            // }
+            withCredentials([string(credentialsId: 'dockerPwd123', variable: 'dockerHubPwd')]) {
+              sh "${dockerCMD} login -u puneet20 -p ${dockerHubPwd}"
+              sh "${dockerCMD} push puneet20/javabootcamp:${tagName}"
+            }
         }
         
         stage('Deploy Application'){
