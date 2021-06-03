@@ -267,7 +267,8 @@ Executing Regression Test Suits...
 Building docker image for javabootcamp application ...
 [Pipeline] sh
 + /var/lib/jenkins/tools/org.jenkinsci.plugins.docker.commons.tools.DockerTool/docker/bin/docker build -t puneet20/javabootcamp:1.0 .
-Sending build context to Docker daemon   17.6MB
+Sending build context to Docker daemon   17.6MB
+
 Step 1/6 : FROM java:8-jdk-alpine
  ---> 3fd9dd82815c
 Step 2/6 : MAINTAINER PUNEET
@@ -296,7 +297,7 @@ Successfully tagged puneet20/javabootcamp:1.0
 [Pipeline] echo
 Pushing image to docker hub
 [Pipeline] sh
-+ /var/lib/jenkins/tools/org.jenkinsci.plugins.docker.commons.tools.DockerTool/docker/bin/docker login -u puneet20 -p Aster1x2021#
++ /var/lib/jenkins/tools/org.jenkinsci.plugins.docker.commons.tools.DockerTool/docker/bin/docker login -u puneet20 -p ****
 Login Succeeded
 [Pipeline] sh
 + /var/lib/jenkins/tools/org.jenkinsci.plugins.docker.commons.tools.DockerTool/docker/bin/docker push puneet20/javabootcamp:1.0
